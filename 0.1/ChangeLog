@@ -1,0 +1,4 @@
+0.1 
+ - First initial of the module: Move out GenericDataAdmin from CMS and make it a individual module for SilverStripe 2.3 releasing. 
+ - Move RelatedDataEditor and DropdownField_WithAdd out of sapphire and add to here. Both the fields were originally made for our project WriteGroup Workshop, however, in favour of SilverStripe new "ModelAdmin", the replacement of GenericDataAdmin, both the fields are not necessary.
+ - The path for including js file and css file changed from 'cms/...' to 'genericedataadmin/...'

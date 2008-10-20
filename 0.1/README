@@ -1,0 +1,51 @@
+###############################################
+genericdataadmin Module
+###############################################
+
+Maintainer Contact
+-----------------------------------------------
+Normann Lou (Nickname: nlou)
+normann@silverstripe.com
+
+Requirements
+-----------------------------------------------
+SilverStripe 2.3
+PHP 4.0 +
+MySQL 4.0 +
+
+Documentation
+-----------------------------------------------
+SilverStripe API: http://api.silverstripe.com/
+Help Documentation: http://doc.silverstripe.com/doku.php?id=genericdataadmin
+
+Hot discussions related:
+Topic: Managing DataObjects (http://www.silverstripe.com/site-builders-forum/flat/84459)
+Topic: CMS Search and Filter (http://www.silverstripe.com/extending-hacking-silverstripe-forum/flat/2526)
+Topic: adding a small database to a site (http://www.silverstripe.com/site-builders-forum/flat/5523)
+Topic: Custom Table Administration (http://www.silverstripe.com/site-builders-forum/flat/2782)
+
+Installation Instructions
+-----------------------------------------------
+It is depending on two other core modules of SilverStripe: cms and sapphire. Before install this module, cms and sapphire need to be pre-installed
+To install the module, download the module's tar file, extract to your project root folder, sibling to cms and sapphire.
+
+Usage Overview
+-----------------------------------------------
+GenericDataAdmin is an abstract class for building custom interfaces, with built-in search- and edit-functionality.
+
+The interface is mostly tailored around a single type of DataObject (e.g. News for the subclass your NewsAdmin).
+
+The customization is achieved by overriding a few context-specific methods (e.g. performSearch() and save()) and using Silverstripe’s sophisticated form-generation.
+
+GenericDataAdmin builds on the basic CMS-interface (class LeftAndMain), so you can also use this class to generate trees etc.
+
+Up to SilverStripe 2.3, there are a bunch of solid admins depending on this abstract admin:
+
+Known issues
+-----------------------------------------------
+'genericdataadmin' will be deprecated starting from 2.3 in favor of ModelAdmin, no further development needed.
+Historically, it does bring lots of interesting issues as following:
+
+1. Validation to GenericDataAdmin forms: fixed by the adding specific function to the data object it manages: getCMSRequiredField(). No particular ticket is created for this, but a changset #40754 (http://open.silverstripe.com/changeset/40754) address this.
+2. It is not scrollable and not resizable in IE for the search results pane: its is fixed by css and update the search result holder with fitToParent function in front end in JS.
+3. Stabilizing GenericDataAdmin search result export function, allowing for multiple GDA search buttons: done by checking if the posted csvIDs is set, calling the button's name rather than hard-coded 'action_getResults', etc. Changeset #57276 (http://open.silverstripe.com/changeset/57276)
