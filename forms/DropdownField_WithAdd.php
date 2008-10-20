@@ -32,7 +32,7 @@ class DropdownField_WithAdd extends DropdownField {
 		Requirements::javascript(THIRDPARTY_DIR . '/prototype.js');
 		Requirements::javascript(THIRDPARTY_DIR . '/behaviour.js');
 		Requirements::javascript(THIRDPARTY_DIR . '/prototype_improvements.js');
-		Requirements::Javascript(SAPPHIRE_DIR . "/javascript/DropdownField_WithAdd.js");
+		Requirements::Javascript(GENERICDATAADMIN_DIR . "/javascript/DropdownField_WithAdd.js");
 
 		$dropdown = parent::Field();
 		if($this->addLink) $addLink = <<<HTML

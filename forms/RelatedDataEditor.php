@@ -21,7 +21,12 @@ class RelatedDataEditor extends FormField {
 	 * @param fields The fields to show
 	 */
 	function __construct($name, $dropdownField, $fields = null, $dropdownClass = 'relatedDataKey', $showKeyDropdown = true) {
-		Requirements::css(SAPPHIRE_DIR . "/css/RelatedDataEditor.css");
+		Requirements::javascript(THIRDPARTY_DIR . '/prototype.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/behaviour.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/prototype_improvements.js');
+		Requirements::Javascript(GENERICDATAADMIN_DIR . "/javascript/RelatedDataEditor.js");
+	
+		Requirements::css(GENERICDATAADMIN_DIR . "/css/RelatedDataEditor.css");
 		parent::__construct($name);
 		$this->dropdownField = $dropdownField;
 		$this->children = $fields;

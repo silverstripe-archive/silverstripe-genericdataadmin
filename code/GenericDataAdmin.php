@@ -8,6 +8,8 @@
  *
  * @deprecated Use {@link ModelAdmin} instead, it's much more advanced and does much more for you.
  */
+
+
 abstract class GenericDataAdmin extends LeftAndMain {
 	static $allowed_actions = array(
 		'createRecord',
@@ -86,8 +88,8 @@ abstract class GenericDataAdmin extends LeftAndMain {
 		Requirements::javascript(CMS_DIR . "/javascript/CMSMain_left.js");
 		Requirements::javascript(CMS_DIR . '/javascript/CMSMain_right.js');
 		
-		Requirements::javascript(CMS_DIR . "/javascript/GenericDataAdmin_left.js");
-		Requirements::javascript(CMS_DIR . "/javascript/GenericDataAdmin_right.js");
+		Requirements::javascript(GENERICDATAADMIN_DIR . "/javascript/GenericDataAdmin_left.js");
+		Requirements::javascript(GENERICDATAADMIN_DIR . "/javascript/GenericDataAdmin_right.js");
 		Requirements::javascript(CMS_DIR . "/javascript/SideTabs.js");
 		
 		// We don't want this showing up in every ajax-response, it should always be present in a CMS-environment
@@ -99,7 +101,7 @@ abstract class GenericDataAdmin extends LeftAndMain {
 			));
 		}
 
-		Requirements::css(CMS_DIR . "/css/GenericDataAdmin.css");
+		Requirements::css(GENERICDATAADMIN_DIR . "/css/GenericDataAdmin.css");
 	}
 	
 	function Link() {
