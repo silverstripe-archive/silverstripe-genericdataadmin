@@ -88,8 +88,12 @@ RightContent.prototype = {
 	
 	getCurrentTab: function() {
 		var current;
-		if($('Root')){
-			var tags = $('Root').getElementsByTagName('li');
+		
+		try {
+			var tags = document.getElementsBySelector('#' + this.id + ' ul.tabstrip li');
+		} catch(er) { /*alert('a: '+ er.message + '\n' + er.line);*/ }
+		
+		if(tags){
 			for(var i=0; i<tags.length; i++){
 				if(Element.hasClassName(tags[0], 'current')){
 					current = tags[i].getElementsByTagName('a')[0];
