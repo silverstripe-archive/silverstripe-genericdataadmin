@@ -51,11 +51,8 @@ form#Form_EditForm #Form_ExportForm fieldset {
 			font-weight:bold;
 			float:left;
 			width:100px;
+			margin-left:-100px;
 			padding-right:3px;
-		}
-		
-		#LeftPane form div {
-			clear:left;
 		}
 
 		#LeftPane form div.field {
