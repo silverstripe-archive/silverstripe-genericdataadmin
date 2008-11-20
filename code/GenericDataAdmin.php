@@ -138,7 +138,7 @@ abstract class GenericDataAdmin extends LeftAndMain {
 	 */
 	function EditForm() {
 		$id = isset($_REQUEST['ID']) ? $_REQUEST['ID'] : Session::get('currentPage');
-		if($id && DataObject::get_by_id($this->stat('data_type'), $id)) {
+		if($id && is_numeric($id) && DataObject::get_by_id($this->stat('data_type'), $id)) {
 			return $this->getEditForm($id);
 		}
 	}
