@@ -38,7 +38,7 @@ RightContent.prototype = {
 	successfullyReceivedPage : function(response) {
 		$('Form_EditForm').loadNewPage(response.responseText);
 	    $('Form_EditForm').initialize();
-	    onload_init_tabstrip();
+	    if(typeof onload_init_tabstrip != 'undefined') onload_init_tabstrip();
 	    // TODO
 	    // try to reopen saved tab (before ajax request)
 	    if($('Form_EditForm').openTab) {
