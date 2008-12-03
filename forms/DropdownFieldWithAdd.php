@@ -6,7 +6,7 @@
  * @package forms
  * @subpackage fields-basic
  */
-class DropdownField_WithAdd extends DropdownField {
+class DropdownFieldWithAdd extends DropdownField {
 		
 	protected $addText, $useExistingText, $addLink, $useExistingLink;
 	public $editLink;
@@ -28,11 +28,11 @@ class DropdownField_WithAdd extends DropdownField {
 	 */
 	function Field() {
 		
-		//Add these js file so that the DropdownField_WithAdd can work alone (in a webpage, rather than CMS).
+		//Add these js file so that the DropdownFieldWithAdd can work alone (in a webpage, rather than CMS).
 		Requirements::javascript(THIRDPARTY_DIR . '/prototype.js');
 		Requirements::javascript(THIRDPARTY_DIR . '/behaviour.js');
 		Requirements::javascript(THIRDPARTY_DIR . '/prototype_improvements.js');
-		Requirements::Javascript(GENERICDATAADMIN_DIR . "/javascript/DropdownField_WithAdd.js");
+		Requirements::Javascript(GENERICDATAADMIN_DIR . "/javascript/DropdownFieldWithAdd.js");
 
 		$dropdown = parent::Field();
 		if($this->addLink) $addLink = <<<HTML

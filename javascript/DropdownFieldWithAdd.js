@@ -1,6 +1,6 @@
-DropdownField_WithAdd = Class.create();
-DropdownField_WithAdd.applyTo('div.dropdownfield_withadd');
-DropdownField_WithAdd.prototype = {
+DropdownFieldWithAdd = Class.create();
+DropdownFieldWithAdd.applyTo('div.dropdownfieldwithadd');
+DropdownFieldWithAdd.prototype = {
 	initialize: function() {
 		WithAdd_Link.applyToChildren(this, '.editlink');
 		WithAdd_Link.applyToChildren(this, '.link');
@@ -57,7 +57,7 @@ WithAdd_Link.prototype = {
 	
 	getOwnerField: function(){
 		var f = this.parentNode;
-		while(f && !f.className.match(/dropdownfield_withadd/)) f=f.parentNode;
+		while(f && !f.className.match(/dropdownfieldwithadd/)) f=f.parentNode;
 		return f;
 	},
 	
