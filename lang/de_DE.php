@@ -2,11 +2,11 @@
 
 /**
  * German (Germany) language pack
- * @package cms
+ * @package modules: genericdataadmin
  * @subpackage i18n
  */
 
-i18n::include_locale_file('cms', 'en_US');
+i18n::include_locale_file('modules: genericdataadmin', 'en_US');
 
 global $lang;
 
@@ -30,5 +30,6 @@ $lang['de_DE']['GenericDataAdmin_left.ss']['ADDLISTING'] = 'Listing hinzufügen'
 $lang['de_DE']['GenericDataAdmin_left.ss']['SEARCHLISTINGS'] = 'Durchsuche Listings';
 $lang['de_DE']['GenericDataAdmin_left.ss']['SEARCHRESULTS'] = 'Suche Ergebnisse';
 $lang['de_DE']['GenericDataAdmin_right.ss']['WELCOME1'] = 'Willkommen zu';
+$lang['de_DE']['GenericDataAdmin_right.ss']['WELCOME2'] = 'Bitte klicken Sie auf einen der Einträge die auf der linken Seite angezeigt werden.';
 
 ?>
