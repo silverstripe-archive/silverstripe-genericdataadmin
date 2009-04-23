@@ -1,3 +1,21 @@
+
+
+(function($) {
+$(document).ready(function() {
+	jQuery('ul.tabstrip').livequery(function() {
+
+		$(this).tabs({
+			// This show handler is necessary to get tabs working properly with the crappy old layout_helpers.js layout
+			// manager
+			show : function() {
+				if(window.onresize) window.onresize();
+			}
+		});
+	});
+})
+})(jQuery);
+
+
 /**
  * Loads, views and removes records in the main view.
  */
@@ -116,4 +134,4 @@ RightContent.prototype = {
 
 var action_delete_right = function(e) { 
  	$('Form_EditForm').remove(e); 
-}  
+}

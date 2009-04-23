@@ -77,6 +77,13 @@ abstract class GenericDataAdmin extends LeftAndMain {
 	 */
 	function init() {
 		parent::init();
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/plugins/livequery/jquery.livequery.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/ui/ui.core.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/ui/ui.tabs.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/plugins/form/jquery.form.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/plugins/effen/jquery.fn.js');
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery_improvements.js');
 
 		Requirements::javascript(MCE_ROOT . "tiny_mce_src.js");
 		Requirements::javascript(THIRDPARTY_DIR . "/tiny_mce_improvements.js");
@@ -87,10 +94,11 @@ abstract class GenericDataAdmin extends LeftAndMain {
 		Requirements::javascript(CMS_DIR . "/javascript/SecurityAdmin.js");
 		Requirements::javascript(CMS_DIR . "/javascript/CMSMain_left.js");
 		Requirements::javascript(CMS_DIR . '/javascript/CMSMain_right.js');
+		Requirements::javascript(CMS_DIR . "/javascript/SideTabs.js");
+		Requirements::javascript('jsparty/tabstrip/tabstrip.js');
 		
 		Requirements::javascript(GENERICDATAADMIN_DIR . "/javascript/GenericDataAdmin_left.js");
 		Requirements::javascript(GENERICDATAADMIN_DIR . "/javascript/GenericDataAdmin_right.js");
-		Requirements::javascript(CMS_DIR . "/javascript/SideTabs.js");
 		
 		// We don't want this showing up in every ajax-response, it should always be present in a CMS-environment
 		if(!Director::is_ajax()) {
