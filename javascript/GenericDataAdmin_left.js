@@ -94,7 +94,7 @@ LeftPane.prototype = {
 	displayNewRecord: function(response) {
 		
 		$('Form_EditForm').innerHTML = response.responseText;
-		if(typeof onload_init_tabstrip != 'undefined') onload_init_tabstrip();
+		if(typeof initTabstrip != 'undefined') initTabstrip();
 		// Makes sure content-behaviour is correctly initialized in the main window.
 		Behaviour.apply( $('Form_EditForm') );
 	},

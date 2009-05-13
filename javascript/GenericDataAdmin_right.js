@@ -1,5 +1,5 @@
 
-
+/*
 (function($) {
 $(document).ready(function() {
 	jQuery('ul.tabstrip').livequery(function() {
@@ -14,7 +14,7 @@ $(document).ready(function() {
 	});
 })
 })(jQuery);
-
+*/
 
 /**
  * Loads, views and removes records in the main view.
@@ -57,16 +57,9 @@ RightContent.prototype = {
 		$('Form_EditForm').loadNewPage(response.responseText);
 	    $('Form_EditForm').initialize();
 	    if(typeof onload_init_tabstrip != 'undefined') onload_init_tabstrip();
-	    // TODO
-	    // try to reopen saved tab (before ajax request)
-	    if($('Form_EditForm').openTab) {
-	        openTab($('Form_EditForm').openTab);
-	    } else {
-    		$('Form_EditForm').openTab = this.getCurrentTab();
-    		openTab($('Form_EditForm').openTab);
-	  	}
 
 	  	clearStatusMessage();
+		if(windows.onresize) window.onresize();
 	},
 	
 	remove: function(e) {
@@ -110,10 +103,9 @@ RightContent.prototype = {
 		try {
 			var tags = document.getElementsBySelector('#' + this.id + ' ul.tabstrip li');
 		} catch(er) { /*alert('a: '+ er.message + '\n' + er.line);*/ }
-		
 		if(tags){
 			for(var i=0; i<tags.length; i++){
-				if(Element.hasClassName(tags[0], 'current')){
+				if(Element.hasClassName(tags[i], 'current')){
 					current = tags[i].getElementsByTagName('a')[0];
 				}else{
 					current = tags[0].getElementsByTagName('a')[0]
