@@ -102,11 +102,8 @@ abstract class GenericDataAdmin extends LeftAndMain {
 		
 		// We don't want this showing up in every ajax-response, it should always be present in a CMS-environment
 		if(!Director::is_ajax()) {
-			Requirements::javascriptTemplate("cms/javascript/tinymce.template.js", array(
-				"ContentCSS" => project() . "/css/editor.css",
-				"BaseURL" => Director::absoluteBaseURL(),
-				"Lang" => i18n::get_tinymce_lang()
-			));
+			HtmlEditorConfig::get('cms')->setOption('ContentCSS', project()."/css/editor.css");
+			HtmlEditorConfig::get('cms')->setOption('Lang', i18n::get_tinymce_lang());
 		}
 
 		Requirements::css(GENERICDATAADMIN_DIR . "/css/GenericDataAdmin.css");
