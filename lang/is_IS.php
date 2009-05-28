@@ -30,5 +30,6 @@ $lang['is_IS']['GenericDataAdmin_left.ss']['ADDLISTING'] = 'Bæta við Listun';
 $lang['is_IS']['GenericDataAdmin_left.ss']['SEARCHLISTINGS'] = 'Leita Listun';
 $lang['is_IS']['GenericDataAdmin_left.ss']['SEARCHRESULTS'] = 'Leitar niðurstöður';
 $lang['is_IS']['GenericDataAdmin_right.ss']['WELCOME1'] = 'Velkomin(n) á';
+$lang['is_IS']['GenericDataAdmin_right.ss']['WELCOME2'] = 'Vinsamlegast veldu eina aðgerð úr vinstri valmynd';
 
 ?>

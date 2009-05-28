@@ -30,5 +30,6 @@ $lang['cs_CZ']['GenericDataAdmin_left.ss']['ADDLISTING'] = 'Přidat seznam';
 $lang['cs_CZ']['GenericDataAdmin_left.ss']['SEARCHLISTINGS'] = 'Hledat v seznamech';
 $lang['cs_CZ']['GenericDataAdmin_left.ss']['SEARCHRESULTS'] = 'Výsledky hledání';
 $lang['cs_CZ']['GenericDataAdmin_right.ss']['WELCOME1'] = 'Vítejte v';
+$lang['cs_CZ']['GenericDataAdmin_right.ss']['WELCOME2'] = 'Vyberte prosím jeden ze článků v levém panelu.';
 
 ?>
