@@ -502,7 +502,11 @@ HTML;
 		$id = $_REQUEST['ID'];
 
 		if(substr($id, 0, 3) != 'new') {
-			$generic = DataObject::get_one($className, "`$className`.ID = $id");
+			$where = "`$className`.ID = $id";
+			if(defined('Database::USE_ANSI_SQL')) {
+				$where = "\"$className\".\"ID\" = $id";
+			}
+			$generic = DataObject::get_one($className, $where);
 			$generic->__Status = "Saved (Update)";
 		} else {
 			$generic = new $className();
