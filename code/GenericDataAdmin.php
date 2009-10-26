@@ -482,7 +482,8 @@ HTML;
 				$fileData .= "\n";
 			}
 
-			return HTTPRequest::send_file($fileData, $fileName);
+			if(class_exists('SS_HTTPRequest')) return SS_HTTPRequest::send_file($fileData, $fileName);
+			else return HTTPRequest::send_file($fileData, $fileName);
 		} else {
 			user_error("No records found", E_USER_ERROR);
 		}
@@ -503,7 +504,7 @@ HTML;
 
 		if(substr($id, 0, 3) != 'new') {
 			$where = "`$className`.ID = $id";
-			if(defined('Database::USE_ANSI_SQL')) {
+			if(defined('DB::USE_ANSI_SQL')) {
 				$where = "\"$className\".\"ID\" = $id";
 			}
 			$generic = DataObject::get_one($className, $where);
