@@ -2,11 +2,11 @@
 
 /**
  * Czech (Czech Republic) language pack
- * @package modules: genericdataadmin
+ * @package genericdataadmin
  * @subpackage i18n
  */
 
-i18n::include_locale_file('modules: genericdataadmin', 'en_US');
+i18n::include_locale_file('genericdataadmin', 'en_US');
 
 global $lang;
 

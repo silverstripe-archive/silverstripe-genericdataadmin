@@ -2,11 +2,11 @@
 
 /**
  * Hungarian (Hungary) language pack
- * @package cms
+ * @package genericdataadmin
  * @subpackage i18n
  */
 
-i18n::include_locale_file('cms', 'en_US');
+i18n::include_locale_file('genericdataadmin', 'en_US');
 
 global $lang;
 
