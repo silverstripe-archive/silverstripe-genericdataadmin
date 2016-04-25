@@ -1,8 +1,14 @@
+**This is an archived project and is no longer supported or updated by SilverStripe.
+Please do not file issues or pull-requests against this repo. 
+If you wish to continue to develop this code yourself, 
+we recommend you fork it or contact the maintainers directly
+(check latest commits for email addresses).**
+
+**This module has been replaced by [ModelAdmin](http://doc.silverstripe.org/sapphire/current/reference/modeladmin) core functionality**
+
 # genericdataadmin Module #
 
 ## Introduction ##
-
-**Warning: This module has been replaced by [ModelAdmin](http://doc.silverstripe.org/sapphire/current/reference/modeladmin) core functionality**
 
 Generic Data Admin lets you manage any DataObject subclasses through a three-pane interface with integrated search, record creation and edit forms. It is deprecated in favour of the new [[:modeladmin|ModelAdmin]] class which has nearly the same interface, but requires a lot less custom coding to get you going. While you have to define your custom edit forms and saving logic in GenericDataAdmin, the new ModelAdmin extracts most of this knowledge from your existing datamodel-definitions.
 
