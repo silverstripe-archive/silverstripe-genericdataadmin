@@ -1,0 +1,19 @@
+{
+	"name": "silverstripe-labs/genericdataadmin",
+	"description": "Generic Data Admin lets you manage any DataObject subclasses
+	through a three-pane interface with integrated search, record creation and edit
+	forms. It is deprecated in favour of the new 'ModelAdmin' class which has nearly
+	the same interface, but requires a lot less custom coding to get you going.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe-labs", "genericdataadmin", "ModelAdmin"],
+	"authors": [
+	{
+		"name": "Normann Lou",
+		"email": "normann@silverstripe.com"
+	}
+	],
+	"require":
+	{
+		"silverstripe/framework": "2.3"
+	}
+}
